@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/public"));
 mongoose.connect("mongodb://127.0.0.1:27017/crm");
 
 app.get("/", (req, res) => {
-res.sendFile(__dirname + "/public/home.html");
+res.sendFile(__dirname + "/public/index.html");
 });
 app.post("/addLead", async (req, res) => {
 
