@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini CRM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Mini CRM - Add Lead</h1>
+
+<form action="/addLead" method="POST">
+
+<label>Name</label>
+<input type="text" name="name" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Lead Source</label>
+<input type="text" name="source">
+
+<label>Status</label>
+<select name="status">
+<option value="New">New</option>
+<option value="Contacted">Contacted</option>
+<option value="Converted">Converted</option>
+</select>
+
+<label>Notes</label>
+<textarea name="notes"></textarea>
+
+<button type="submit">Add Lead</button>
+
+</form>
+
+<br>
+
+<a href="dashboard.html" class="dashboard">View Leads Dashboard</a>
+
+</body>
+</html>
