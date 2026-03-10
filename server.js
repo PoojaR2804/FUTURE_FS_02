@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://crmuser:crm12345@cluster0.z4ulycu.mongodb.net/?appName=Cluster0)
 .then(() => console.log("MongoDB Atlas Connected"))
 .catch((err) => console.log(err));
 
@@ -55,5 +55,7 @@ status:req.params.status
 res.send("updated");
 
 });
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
 
-module.exports = app;
