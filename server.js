@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
-mongoose.connect("mongodb+srv://crmuser:crm12345@cluster0.z4ulycu.mongodb.net/?appName=Cluster0")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Atlas Connected"))
 .catch((err) => console.log(err));
 
